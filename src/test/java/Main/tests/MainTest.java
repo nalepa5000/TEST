@@ -6,7 +6,7 @@ import Main.pages.MainPage;
 public class MainTest extends Base{
 
     @Test
-    public void chooseChlight() throws InterruptedException {
+    public void chooseChlight() {
         MainPage mainPage = new MainPage(driver);
         mainPage.clickFlights();
         mainPage.chooseWaysFlights("cośtam");

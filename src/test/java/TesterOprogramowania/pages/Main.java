@@ -15,9 +15,7 @@ import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.time.Duration;
-import java.util.List;
 import java.util.Set;
 
 public class Main {
@@ -40,7 +38,7 @@ public class Main {
         actions = new Actions(driver);
     }
 
-    public void handlingNewWindow() throws InterruptedException {
+    public void handlingNewWindow() {
         String mainHandle = driver.getWindowHandle();
         nePageButton.click();
         Set<String> handles = driver.getWindowHandles();
@@ -49,7 +47,6 @@ public class Main {
                 driver.switchTo().window(handle);
             }
         }
-        Thread.sleep(10000);
         System.out.println(driver.getCurrentUrl());
         driver.switchTo().window(mainHandle);
         System.out.println(driver.getCurrentUrl());
@@ -60,7 +57,6 @@ public class Main {
         logger.info("Obrazek Sprawdzany");
         String height = picture.getAttribute("natturalHeight");
         Assert.assertNotEquals(height,"0");
-        logger.info("Obrazek Sprawdzony");
     }
 
     public void takeScreenshot() throws IOException {
