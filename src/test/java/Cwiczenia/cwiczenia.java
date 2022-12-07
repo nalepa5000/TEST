@@ -159,6 +159,38 @@ public class cwiczenia {
     }
 
     //FIBONACZI
+    public static int fibbonaczi(int n){
+        if(n==0){
+            return 0;
+        } else if (n==1){
+            return 1;
+        }
+        else
+            return fibbonaczi(n-1)+fibbonaczi(n-2);
+    }
+
+
+    public static int silniaa(int n){
+        if(n<2){
+            return 1;
+        } else
+            return n*silniaa(n-1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static int fibonaci(int n){
         if(n==0)
             return 0;
